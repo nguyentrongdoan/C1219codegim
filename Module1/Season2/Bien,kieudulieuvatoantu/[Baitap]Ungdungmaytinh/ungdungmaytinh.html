@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ung dung may tinh</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container > #kq{
+            width: 17.7em;
+            height: 3em;
+        }
+        #container > input{
+            width: 3em;
+            height: 3em;
+            margin: 0.2em;
+        }
+    </style>
+    <script>
+        let x=``;
+        function a(id) {
+            return document.getElementById(id);
+        }
+        function set_num(num) {
+            x+=num;
+            a(`kq`).value=x;
+        }
+        function xoa() {
+            x=``;
+            a(`kq`).value=x;
+        }
+        function ketqua() {
+            a(`kq`).value=eval(a(`kq`).value);
+            x=a(`kq`).value;
+        }
+    </script>
+</head>
+<body>
+<div id="container">
+    <input id="kq" placeholder="hien thi ket qua"><br>
+    <input type="button" value="1" onclick="set_num(this.value)">
+    <input type="button" value="2" onclick="set_num(this.value)">
+    <input type="button" value="3" onclick="set_num(this.value)">
+    <input type="button" value="+" onclick="set_num(this.value)">
+    <input type="button" value="-" onclick="set_num(this.value)"><br>
+    <input type="button" value="4" onclick="set_num(this.value)">
+    <input type="button" value="5" onclick="set_num(this.value)">
+    <input type="button" value="6" onclick="set_num(this.value)">
+    <input type="button" value="*" onclick="set_num(this.value)">
+    <input type="button" value="/" onclick="set_num(this.value)"><br>
+    <input type="button" value="7" onclick="set_num(this.value)">
+    <input type="button" value="8" onclick="set_num(this.value)">
+    <input type="button" value="9" onclick="set_num(this.value)">
+    <input type="button" value="=" onclick="ketqua()">
+    <input type="button" value="C" onclick="xoa()">
+</div>
+
+</body>
+</html>

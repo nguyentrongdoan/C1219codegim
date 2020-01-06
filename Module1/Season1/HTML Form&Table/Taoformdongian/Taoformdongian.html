@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+    <style>
+        .h2{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="Taoformdongian.html">
+
+    <table align="center" style="background-color: greenyellow">
+        <tr>
+            <th colspan="2" align="center" style="background-color: red" class="h2">SỞ THÍCH CỦA BẠN</th>
+        </tr>
+        <tr>
+            <td style="color: blue">Họ và tên</td>
+            <td>
+                <input type="text" name="Yourname" value="">
+            </td>
+        </tr><br>
+        <tr>
+            <td align="center" style="color: blue">Email</td>
+            <td>
+                <input type="text" name="email" value="">
+            </td>
+        </tr>
+        <tr>
+            <td style="color: blue">Sở thích</td>
+            <td style="color: red">
+                <input type="checkbox" value="1" name="hobbies[]"> Thể thao
+                <input type="checkbox" value="1" name="hobbies[]"> Âm nhạc
+                <input type="checkbox" value="1" name="hobbies[]"> Đọc sách
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="color: red">
+                <input type="checkbox" value="1" name="hobbies[]"> Lướt web
+                <input type="checkbox" value="1" name="hobbies[]"> Chơi game
+                <input type="checkbox" value="1" name="hobbies[]"> Điện ảnh
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td style="color: red">
+                <input type="checkbox" value="1" name="hobbies[]"> Du lịch
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="Submit" value="Gửi thông tin" style="background-color: aqua">
+                <input type="Reset" value="Nhập lại" style="background-color: aqua">
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>

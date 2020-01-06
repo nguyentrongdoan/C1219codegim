@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 1</title>
+</head>
+<body>
+<script>
+    let inputVatly;
+    let inputHoahoc;
+    let inputSinhhoc;
+    inputVatly = prompt("nhap diem mon Vat ly");
+    inputHoahoc = prompt("nhap diem mon Hoa hoc");
+    inputSinhhoc = prompt("nhap diem mon Sinh hoc");
+    let Vatly = parseFloat(inputVatly);
+    let Hoahoc = parseFloat(inputHoahoc);
+    let Sinhhoc = parseFloat(inputSinhhoc);
+    let arvage = (Vatly + Hoahoc + Sinhhoc) / 3;
+    let total = Vatly + Hoahoc + Sinhhoc
+    document.write(`The arvage is: ` + arvage);
+    document.write(`the total is: ` + total);
+</script>
+
+</body>
+</html>
