@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="month" type="text" placeholder="thang may?" style="margin-right: 50px">
+    <button onclick="convertMonth()">Tinh so ngay</button>
+    <p id="bus" style="color: red "></p>
+
+<script>
+   let convertMonth = () => {
+    let day,year;
+    day = document.getElementById("month").value;
+    day = Number.parseInt(day);
+    year = document.getElementById("bus");
+
+
+    switch (day) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            year.innerText = "Thang " + day + " co 31 ngay.";
+            break;
+        case 2:
+            year.innerText = "Thang " + day + " co 28 hoac 29 ngay.";
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            year.innerText = "Thang " + day + " co 30 ngay.";
+            break;
+        default:
+            alert("Vui long kiem tra lai!");
+    }
+}
+</script>
+</body>
+</html>

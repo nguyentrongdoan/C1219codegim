@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Giải phương trình bậc nhất ax + b = 0</h3>
+<input type="text" id="input1">x +
+<input type="text" id="input2"> = 0<br><br>
+
+<button onclick="theDay()">Giải phương trình</button>
+<p id="result" style="color: red"></p>
+
+<script>
+    function theDay() {
+        let a = document.getElementById(`input1`).value;
+        a = Number.parseFloat(a);
+
+        let b = document.getElementById(`input2`).value;
+        b = Number.parseFloat(b);
+
+        if ( a == 0  && b == 0) {
+            document.getElementById(`result`).innerHTML = "Phuong trinh vo so nghiem.";
+        } else if ( b == 0 && a != 0) {
+            document.getElementById(`result`).innerHTML = "Phuong trinh co nghiem x = 0.";
+        } else if ( a == 0 && b != 0) {
+            document.getElementById(`result`).innerHTML = "Phuong trinh vo nghiem.";
+        } else {
+            document.getElementById(`result`).innerHTML = "Phuong trinh co nghiem x = " + (-b/a);
+        }
+
+
+
+    }
+
+</script>
+</body>
+</html>

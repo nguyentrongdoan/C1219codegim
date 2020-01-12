@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let date = new Date();
+    let nowYear = date.getFullYear();
+    // xác định thời gian hiện tại bằng cách dùng hàm newDate và hàm getFullYear.
+
+    let bornYear = Number.parseInt(prompt("Born year input: "));
+
+    let z = nowYear - bornYear;
+
+    if (z > 0){
+        document.write("Tuổi của bạn hiện tại là: " + z);
+    }else {
+        document.write("Không hợp lệ!");
+    }
+</script>
+
+</body>
+</html>

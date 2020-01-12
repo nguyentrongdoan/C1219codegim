@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Tính tổng các số lẻ trong một mảng cho trước. sunDay = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</div>
+
+<script>
+let sunDay = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+function sumOdd(sunDay) {
+    let sum = 0;
+
+    for (let i = 0; i < sunDay.length; i++){
+        if (sunDay[i] % 2 !== 0){
+            sum += sunDay[i];
+        }
+    }
+    return sum;
+}
+
+document.write("sum odd: " + sumOdd(sunDay));
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<tr>Thu nhâp / năm:</tr>
+<tr><input type="text" id="input1"></tr>
+<tr><button onclick="theDay()" style="border-radius: 50px">Submit</button></tr>
+<div id="result" style="color: red"></div>
+
+<script>
+    function theDay() {
+        let x = document.getElementById(`input1`).value;
+        x = Number.parseFloat(x);
+
+        if (x > 0 && x <= 60){
+            document.getElementById(`result`).innerHTML = " Thue thu nhap het: " + (x * 0.05);
+        } else if (x > 60 && x <= 120){
+            document.getElementById(`result`).innerHTML = " Thue thu nhap het: " + (x * 0.1);
+        } else if (x > 120 && x <= 216){
+            document.getElementById(`result`).innerHTML = " Thue thu nhap het: " + (x * 0.15);
+        } else if (x > 216 && x <= 384){
+            document.getElementById(`result`).innerHTML = " Thue thu nhap het: " + (x * 0.2);
+        } else if (x > 384 && x <= 624){
+            document.getElementById(`result`).innerHTML = " Thue thu nhap het: " + (x * 0.25);
+        } else if (x > 624 && x <= 960){
+            document.getElementById(`result`).innerHTML = " Thue thu nhap het: " + (x * 0.3);
+        } else {
+            document.getElementById(`result`).innerHTML = " Thue thu nhap het: " + (x * 0.35);
+        }
+    }
+</script>
+</body>
+</html>

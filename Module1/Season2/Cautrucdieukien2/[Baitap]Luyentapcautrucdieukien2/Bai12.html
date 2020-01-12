@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Vay ngân hàng 50 triệu, trong thời hạn 12 tháng với lãi suất 18% một năm. Tính số tiền phải trả hàng tháng theo kiểu dư nợ giảm dần?</p>
+<table>
+    <tr>Số tiền vay:</tr>
+    <tr><input type="text" id="input1"></tr>
+    <br>
+    <tr>Tháng:</tr>
+    <tr>
+        <select id="input2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+
+        </select>
+    </tr>
+    <br>
+    <button onclick="theDay()">Submit</button>
+    <div id="result"></div>
+
+</table>
+<script>
+    function theDay() {
+        let x = document.getElementById(`input1`).value;
+        x = Number.parseFloat(x);
+        let y = document.getElementById(`input2`);
+        let z = (x / 12) + (x * 0.18) / 12;
+
+        switch (y) {
+            case 1:
+                document.getElementById(`result`).innerHTML = "Tháng đầu tiên bạn phải trả: " + z;
+                break;
+        }
+    }
+</script>
+
+</body>
+</html>

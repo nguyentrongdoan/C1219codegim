@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="a" placeholder="nhap ten">
+<button onclick="convertName()">Nhập tên</button>
+<p id="b" style="color: red"></p>
+<script>
+    let convertName = () => {
+        let x,y;
+        x = document.getElementById("a").value;
+        y = document.getElementById("b");
+
+        switch (x) {
+            case "Yến":
+            case "Linh":
+            case "Nhi":
+            case "Minh hiền":
+                y.innerText = "Tên" + x + " trùng tên người yêu của bố.";
+                break;
+            case "Anh":
+            case "Hoa":
+            case "Đức":
+            case "Tùng":
+                y.innerText = "Tên" + x + " trùng tên người yêu của mẹ.";
+                break;
+            case "Trang":
+            case "Nguyên":
+            case "Huyền":
+            case "Vân":
+                y.innerText = "Tên" + x + " Phạm húy.";
+                break;
+            default:
+                alert("OK!");
+        }
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = prompt(" Nhập giá trị thứ nhất: ");
+    let y = prompt(" Nhập giá trị thứ hai: ");
+    let z = prompt(" Nhập giá trị thứ ba: ");
+    x = Number.parseInt(x);
+    y = Number.parseInt(y);
+    z = Number.parseInt(z);
+    let maxx;
+
+    if ( x !== y && x !== z ) {
+        if (x > y && x > z) {
+            alert(" So lon nhat la: " + x);
+        } else if (y > z && y > x) {
+            alert(" So lon nhat la: " + y);
+        } else {
+            alert(" So lon nhat la: " + z);
+        }
+    } else {
+        alert("Ban da nhap cac so co gia tri bang nhau, vui long nhap lai gia tri khac!");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="fit" style="margin-right: 50px">
+<select name="" id="input1" style="margin-right: 50px">
+    <option value="Meters">Meters</option>
+    <option value="Feet">Feet</option>
+</select>
+
+<select name="" id="input2" style="margin-right: 50px">
+    <option value="Feet">Feet</option>
+    <option value="Meters">Meters</option>
+</select>
+<button onclick="theFirst()">Click me</button>
+<div id="result" style="color: red"></div>
+<script>
+
+    function theFirst() {
+
+        x = document.getElementById(`fit`).value;
+        x = Number.parseFloat(x);
+
+        m = document.getElementById(`input1`).value;
+        n = document.getElementById(`input2`).value;
+
+        let y = ( x * 3.2808 );
+        let z = ( x / 3.2808 );
+
+        if ( m == `Meters` && n == `Feet`) {
+            document.getElementById(`result`).innerHTML = "Gia tri do dai la: " + y;
+        } else if ( m == `Feet` && n == `Meters`) {
+            document.getElementById(`result`).innerHTML = "Gia tri do dai la: " + z;
+        } else {
+            document.getElementById(`result`).innerHTML = "Vui long kiem tra lai. "
+        }
+    }
+</script>
+</body>
+</html>

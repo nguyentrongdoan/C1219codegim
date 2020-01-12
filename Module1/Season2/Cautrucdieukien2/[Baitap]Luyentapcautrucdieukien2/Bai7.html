@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Giai phuong trinh bac 2: ax <sup>2</sup> + bx + c = 0</h3>
+<input type="text" id="input1"> x <sup>2</sup> + <input type="text" id="input2"> x + <input type="text" id="input3"> = 0
+
+<button onclick="theHome()">Giai phuong trinh</button>
+<div id="result"></div>
+
+<script>
+    function theHome() {
+        let a = document.getElementById(`input1`).value;
+        a = Number.parseFloat(a);
+
+        let b = document.getElementById(`input2`).value;
+        b = Number.parseFloat(b);
+
+        let c = document.getElementById(`input3`).value;
+        c = Number.parseFloat(c);
+
+        let z = b*b - 4*a*c;
+
+        if (z < 0) {
+            document.getElementById(`result`).innerHTML = "Phuong trinh vo nghiem.";
+        } else if (z == 0) {
+            document.getElementById(`result`).innerHTML = "Phuong trinh co 1 nghiem duy nhat x = " + (-b/a);
+        } else if (z > 0) {
+            document.getElementById(`result`).innerHTML = "Phuong trinh co 2 nghiem:<br> x1 = " + ((-b + Math.sqrt(z)) / (2*a)) + "<br>x2 = " + ((-b - Math.sqrt(z)) / (2*a));
+        }
+    }
+
+</script>
+
+</body>
+</html>

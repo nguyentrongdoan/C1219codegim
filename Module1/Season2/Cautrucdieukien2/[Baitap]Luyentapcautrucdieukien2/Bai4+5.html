@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<tr>Cạnh thứ nhất:</tr><br>
+<tr><input type="text" id="input1"></tr><br>
+<tr>Cạnh thứ hai:</tr><br>
+<tr><input type="text" id="input2"></tr><br>
+<tr>Chọn hình dạng cần tính:</tr><br>
+<select name="" id="input3">
+    <option value="Rectangle">Rectangle</option>
+    <option value="Triangle">Triangle</option>
+</select>
+<br><br><br>
+<button onclick="theFist()">Tính diện tích</button>
+<p id="result"></p>
+
+<script>
+    function theFist() {
+        let x = document.getElementById(`input1`).value;
+        x = Number.parseFloat(x);
+
+        let y = document.getElementById(`input2`).value;
+        y = Number.parseFloat(y);
+
+        let m = document.getElementById(`input3`).value;
+
+        let e = (x * y);
+        let f = (x * y) / 2;
+
+        if ( m == `Rectangle`) {
+            document.getElementById(`result`).innerHTML = " Dien tich la: " + e;
+        } else if ( m == `Triangle`) {
+            document.getElementById(`result`).innerHTML = " Dien tich la: " + f;
+        }
+
+    }
+
+</script>
+</body>
+</html>

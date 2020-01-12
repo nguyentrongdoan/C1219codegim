@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        button{
+            border-radius: 30px;
+        }
+        button:hover{
+            color: red;
+        }
+        div{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <tr>Số lượng điện tiêu thụ:</tr>
+    <tr>
+        <td><input type="text" id="input1" ></td>
+        <td><button onclick="theDay()">Submit</button></td>
+    </tr>
+    <tr><div id="result"></div></tr>
+
+<script>
+    function theDay() {
+        let x = document.getElementById(`input1`).value;
+        x = Number.parseFloat(x);
+
+        let z = (x * 1678);
+        let e = (z + (x - 50) * 1734);
+        let f = (e + (x - 100) * 2014);
+        let g = (f + (x - 200) * 2536);
+        let h = (g + (x - 300) * 2834);
+        let j = (h + (x - 400) * 2927);
+
+        if (x > 0 && x <= 50) {
+            document.getElementById(`result`).innerHTML = "Tien dien thang nay la: " + z;
+        } else if (x > 51 && x <= 100) {
+            document.getElementById(`result`).innerHTML = "Tien dien thang nay het: " + e;
+        } else if (x > 101 && x <= 200) {
+            document.getElementById(`result`).innerHTML = "Tien dien thang nay het: " + f;
+        } else if (x > 201 && x <= 300) {
+            document.getElementById(`result`).innerHTML = "Tien dien thang nay het: " + g;
+        } else if (x > 301 && x <= 400) {
+            document.getElementById(`result`).innerHTML = "Tien dien thang nay het: " + h;
+        } else {
+            document.getElementById(`result`).innerHTML = "Nhà bạn tiêu thụ quá nhiều điện, tiền điện tháng này hết: " + j;
+        }
+    }
+</script>
+
+</body>
+</html>

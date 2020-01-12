@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhap gia tri canh a: ");
+    a = Number.parseInt(a);
+
+    let b = prompt("nhap gia tri canh b:");
+    b = Number.parseInt(b);
+
+    let c = prompt("nhap gia tri canh c: ");
+    c = Number.parseInt(c);
+
+    if ( a > 0 && b > 0 && c > 0) {
+        if ((a + b) > c) {
+            alert(" Day la 1 tam giac.");
+        } else if ((b + c) > a) {
+            alert("Day la mot tam giac.");
+        } else if ((a + c) > b) {
+            alert(" Day la mot tam giac.");
+        }
+    } else {
+        alert("Khong phai mot tam giac.")
+    }
+</script>
+
+</body>
+</html>

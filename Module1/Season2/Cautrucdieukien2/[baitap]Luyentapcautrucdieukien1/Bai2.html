@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = prompt(" Nhập số tuổi hiện tại của bạn: ");
+    x = Number.parseInt(x);
+
+    if (x < 15) {
+        alert("Bạn vẫn còn non và xanh. Chưa đủ điều kiện vào lớp 10.");
+    } else if (x == 15 || x < 18) {
+        alert("Bạn đủ điều kiện vào lớp 10. Chúc mừng bạn!");
+    } else {
+        alert("Bạn quá già để học lớp 10. SORRY!");
+    }
+</script>
+</body>
+</html>

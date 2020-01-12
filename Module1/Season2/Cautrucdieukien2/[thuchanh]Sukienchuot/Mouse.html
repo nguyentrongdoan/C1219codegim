@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="">
+    <img id="myImage" src="http://t3.gstatic.com/images?q=tbn:ANd9GcQjH2YfmNulwL5bEaluLCtGBrVLLNjWO9Gnz8bNlrlXBpSmzoj1Fa6aMIFz-oi9kuZMJwdw8ingUvQvpRi6CgE" alt="" style="width: 500px">
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="click me" onclick="moveRight();"/>
+</form>
+<script>
+    let imObj = null;
+    imObj = document.getElementById(`myImage`);
+
+    function init() {
+        imObj = document.getElementById(`myImage`);
+        imObj.style.position = `relative`;
+        imObj.style.left = `0px`;
+    }
+
+    function moveRight() {
+        imObj.style.left = parseInt(imObj.style.left) + 10 + `px`;
+    }
+
+    window.onload = init;
+
+</script>
+</body>
+</html>
