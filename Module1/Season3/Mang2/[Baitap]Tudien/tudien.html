@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tudien</title>
+</head>
+<body>
+
+    <div>English:</div>
+    <div><input type="text" id="input1" placeholder="nhap tu tieng anh"></div>
+    <br>
+    <button onclick="tranfer()">Tranfer</button>
+    <p id="result" style="background-color: red"></p>
+
+<script>
+
+    let result="Khong thay";
+
+    let m = ["cat", "dog", "snake"];
+    let n = ["meo", "cho", "ran"];
+    function tranfer() {
+        let x = document.getElementById(`input1`).value;
+        for (i = 0; i < m.length; i++){
+
+            if (x == m[i]) {
+                result = n[i];
+                break;
+                // document.getElementById(`result`).innerHTML = m[i]=n[i];
+            }
+            // else{
+            //     document.getElementById(`result`).innerHTML = "khong thay";
+            // }
+        }
+        document.getElementById(`result`).innerHTML = result;
+    }
+
+</script>
+
+</body>
+</html>

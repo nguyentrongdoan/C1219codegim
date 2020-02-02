@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+    let x = [`c`, `s`, `c`, 2, 6, 1];
+// Su dung truc tiep ham reverse().
+   /*x.reverse().join();
+    console.log(x);
+
+    */
+// Sử dụng cách hoán vị vị trí:
+    function doiViTri(x) {
+        let first = 0;
+        let last = x.length - 1;
+        while (first < last){
+            let b = x[first];
+            x[first] = x[last];
+            x[last] = b;
+            first++;
+            last--;
+        }
+        document.write(x);
+    }
+    doiViTri(x);
+
+</script>
+
+</body>
+</html>

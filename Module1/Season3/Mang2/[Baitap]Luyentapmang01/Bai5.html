@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai5</title>
 </head>
 <body>
-$END$
+<script>
+
+        let array = [-1, 0, 9, 6, -6, -10, -7.5, -100 ];
+        function check() {
+            let count = 0;
+            for (let i = 0; i < array.length; i++){
+                if(array[i] < 0 && array[i] === parseInt(array[i])){
+                    document.write(array[i] + "<br>");
+                    count++;
+                }
+            }
+            document.write("Số lượng sô nguyên âm là:"+ count);
+        }
+    check();
+</script>
+
 </body>
 </html>

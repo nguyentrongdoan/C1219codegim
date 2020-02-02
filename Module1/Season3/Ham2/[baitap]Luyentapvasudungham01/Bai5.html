@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai5</title>
 </head>
 <body>
-$END$
+<script>
+    let result = "khong thay";
+    let a = [`Polaris`, `Aldebaran`, `Deneb`, `Vega`, `Altair`, `Dubhe`, `Regulus`];
+    let b = [`Ursa Minor`, `Tarurus`, `Cygnus`, `Lyra`, `Aquila`, `Ursa Major`, `Leo`];
+    function tomorow() {
+        for ( let i = 0; i < a.length; i++){
+            if (f == a[i]){
+               result = b[i];
+                break;
+            }
+        }
+        document.write(result);
+    }
+    let f = prompt("nhap tu can tim kiem vao day:" );
+    tomorow();
+</script>
+
 </body>
 </html>

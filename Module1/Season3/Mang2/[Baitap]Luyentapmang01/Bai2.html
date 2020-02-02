@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai2</title>
+</head>
+<body>
+<script>
+    
+    let x = [2,3,5,7,11,13,17,19,23,29,0];
+    
+    let max = x[0];
+    let index = 0;
+
+    for (let i = 1; i < x.length; i++){
+        if (x[i] > max){
+            x[i] = max;
+            index = i;
+        }
+    }
+    alert("max:" + max + "vi tri:" + index);
+    
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -2,9 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    function footToMeter(foot) {
+       let result =  0.305 * foot;
+       return result;
+    }
+    function meterToFoot(meter) {
+      let x = 3.279 * meter;
+      return x;
+    }
+    
+    function calculator() {
+        let input = document.getElementById(`input1`).value;
+        let result = footToMeter(input);
+
+        document.getElementById(`result`).innerHTML = result;
+
+    }
+
+    function key() {
+        let input = document.getElementById(`input2`).value;
+        let x = meterToFoot(input);
+        document.getElementById(`x`).innerHTML = x;
+    }
+</script>
+
+<input type="text" id="input1" oninput="calculator()"  placeholder="Enter feet">is: <span id="result"></span>
+<br><br>
+<input type="text" id="input2" oninput="key()"  placeholder="Enter meter">is: <span id="x"></span>
+
 </body>
 </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai3 In tam giac vuong , cac goc vuong nam o cac vi tri khac nhau.</title>
+</head>
+<body>
+<script>
+    let x = parseInt(prompt("nhap gia tri:"));
+    function tamGiac1() {
+        for (let i = 1; i <= x; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.writeln("*");
+            }
+
+            document.writeln("<br>");
+        }
+        document.writeln("<br>");
+    }
+    tamGiac1();
+
+
+    // tam giac 2:
+    function tamGiac2() {
+        for (let i = x; i > 0; i--) {
+            for (let j = 1; j <= i; j++) {
+                document.writeln("*");
+            }
+            document.writeln("<br>");
+        }
+    }
+    tamGiac2();
+
+    // tam giac 3:
+    function tamGiac3() {
+        for (let i = x; i > 0; i--) {
+            for (let j = 1; j <= i; j++) {
+                document.writeln("&nbsp&nbsp");
+            }
+            for (let m = 0; m <= x -i; m++ ){
+                document.writeln("*");
+            }
+
+            document.writeln("<br>");
+        }
+        document.writeln("<br>");
+    }
+    tamGiac3();
+
+    // tam giac 4:
+    function tamGiac4() {
+        for (let i = 1; i <= x; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.writeln("&nbsp&nbsp");
+            }
+            for (let n = x; n >= i; n--){
+                document.writeln("*");
+            }
+
+            document.writeln("<br>");
+        }
+
+    }
+    tamGiac4();
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai1</title>
 </head>
 <body>
-$END$
+<script>
+    function binhPhuong(number) {
+        let  x = number * number;
+        return  x;
+    }
+
+    function toDay() {
+        let y = document.getElementById(`input1`).value;
+        let x = binhPhuong(y);
+
+        document.getElementById(`result`).innerHTML = x;
+    }
+</script>
+<input type="text" id="input1" oninput="toDay()" placeholder="Enter a number">binh phuong la: <span id="result"></span>
+
 </body>
 </html>

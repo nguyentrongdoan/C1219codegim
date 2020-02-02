@@ -2,9 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai7: nhap vao 2 so nguyen roi doi vi tri 2 so do.</title>
 </head>
 <body>
-$END$
+<script>
+    function doiViTri() {
+        let x = parseInt(prompt("nhap vao so thu nhat:"));
+        let y = parseInt(prompt("nhap vao so thu hai:"));
+        let temp;
+        temp = x;
+        x = y;
+        y = temp;
+        document.write("x =" + x + "<br>");
+        document.write("y =" + y);
+    }
+    doiViTri();
+</script>
 </body>
 </html>

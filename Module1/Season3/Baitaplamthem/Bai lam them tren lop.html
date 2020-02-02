@@ -2,9 +2,197 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let a = new Array();
+    let count = 0;
+
+    function init(n) {
+        for (let i = 0; i < n; i++)
+            a.push(Math.round(Math.random()*1000));
+
+    }
+    function show(n) {
+        for (let i = 0; i < n; i++)
+            //console.log(i + " : " + a[i]);
+            document.write(i + " : " + a[i] + "<br>");
+
+    }
+    function main() {
+        count = prompt("nhap so phan tu cua mang:");
+        count = parseInt(count);
+        init(count);
+        show(count);
+
+    }
+    // tim kiem tuan tu:
+    function sequentialSearch(x, n) {
+        let indArr = new Array();
+        for (let i = 0; i < n; i++)
+            if (a[i] == x)
+                indArr.push(i);
+            return indArr;
+
+    }
+
+    // dung phuong phap de qui.
+    function binarySearch(x, i, j) {
+        if (i > j)
+            return -1;
+        let m = Math.round((i + j) / 2);
+        if (a[m] == x)
+            return m;
+        if (a[m] > x)
+            j = m;
+        else
+            i = m;
+        return binarySearch(x, i ,j );  // Goi de quy.
+
+    }
+    function main() {
+        count = prompt("nhap so phan tu cua mang:");
+        count = parseInt(count);
+        init(count);
+        show(count);
+        /*let x = prompt("nhap gia tri can tim:");
+        x = parseInt(x);
+        let pos = sequentialSearch(x, count);
+        if (pos.length != 0) {
+            let i;
+            let str = "tim thay tai vi tri:";
+            for (i in pos)
+                str += pos[i] + " , ";
+            alert(str);
+        }
+        else
+            alert("khong tim thay!");
+        a.sort(function (a,b) {
+            return a - b;
+        });
+        let bPos = binarySearch(x, 0, count - 1);
+        if (bPos == -1)
+            alert("Khong tim thay!");
+        else
+            alert("Tim thay tai vi tri:" + bPos);
+
+         */
+        //selectionSort();
+        //insertionSort();
+        //bubbleSort();
+        quickSort(0, a.length -1);
+       // console.log("Sau khi sap xep:");
+        document.write("Sau khi sap xep: " + "<br>");
+        show(count);
+    }
+
+
+    // Sap xep
+    // Sap xep lua chon
+    function selectionSort() {
+        let i, j, tmp;
+        let min, pMin;
+        for (i = 0; i < a.length - 1; i++) {
+            min = a[i];
+            pMin = i;
+            for (j = i + 1; j < a.length; j++){
+                if (a[j] < min){
+                    min = a[j];
+                    pMin = j;
+                }
+            }
+            if (a[i] != min){
+
+                tmp = a[i];
+                a[i] = a[pMin];
+                a[pMin] = tmp;
+            }
+        }
+    }
+
+    // Sap xep chen
+    function insertionSort() {
+        let i, j, min;
+        for (i = 0; i < a.length -1; i++){
+            min = a[a.length - 1];
+            for (j = a.length -1; j > i; j--){
+                if (a[j-1] < min){
+                    a[j] = min;
+                    min = a[j -1];
+                }else
+                    a[j] = a[j-1];
+
+            }
+            a[i] = min;
+
+        }
+
+    }
+
+    // Sap xep noi bot:
+
+    function bubbleSort() {
+        let i, j, tmp;
+        for (i = a.length - 1; i > 0; i--){
+            for (j = 0; j < i; j++)
+                if (a[j] > a[j + 1]){
+                    tmp = a[j];
+                    a[j] = a[j + 1];
+                    a[j + 1] = tmp;
+                }
+
+        }
+
+    }
+
+    // Sap xep nhanh:
+    function partition(l, r) {
+        let i, j, k, pos;
+        pos = Math.round((l+r)/2);
+        let posVal = a[pos];
+
+        i = l;
+        j = r;
+        while (i < j){
+            while (a[i] < posVal)
+                i++;
+            while (a[j] >= posVal)
+                j--;
+            if (i < j){
+                tmp = a[i];
+                a[i] = a[j];
+                a[j] = tmp;
+            }
+        }
+        // dua gia tri chot ve ben trai nhat cua day con ben phai.
+        let min = a[i];
+        let pMin = i;
+        for (k = i + 1; k <= r; k++){
+            if (a[k] < min){
+                min = a[k];
+                pMin = k;
+            }
+        }
+        if (pMin != i){
+            tmp = a[i];
+            a[i] = a[pMin];
+            a[pMin] = tmp;
+        }
+        return i;
+    }
+    function quickSort(l, r) {
+        // buoc 1: chia.
+        if (l >= r)
+            return;
+       let m = partition(l,r);
+        // goi de qui.
+        quickSort(l, m -1);
+        quickSort(m + 1, r);
+
+    }
+    main();
+</script>
+
 </body>
 </html>

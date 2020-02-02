@@ -2,9 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <script>
+        const STEP = 5;
+        function Cricle(x, y, radius,color) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+            this.color = color;
+            this.changeCoordination = function(newX, newY){
+                this.x = newX;
+                this.y = newY;
+            };
+            this.getArea = function () {
+                return Math.PI*this.radius*this.radius;
+            };
+            this.setColor = function (color) {
+                this.color = color;
+            };
+            this.toString = function () {
+                let str = "";
+                str += "<br>Ban kinh la:" + this.radius;
+                str += "<br>Mau la:" + this.color;
+
+                return str;
+            };
+
+            // ve hinh tron dung ham draw:
+            this.clear = function (canvas) {
+                let ctx = canvas.getContext("2d");
+                ctx.clearRect(this.x - this.radius-2, this.y - this.radius-2, 2*this.radius-2, 2*this.radius-2);
+
+            };
+
+            this.draw = function (canvas) {
+                let ctx = canvas.getContext("2d");
+                ctx.beginPath();
+
+                // Cach them kich thuoc radom cho vong tron bang ham Math.random()
+                // 400 va 300 la toa do ta dat ve hinh tron.
+               // ctx.arc(this.x, this.y, Math.random()*400,Math.random()*300, this.radius*Math.random(),0,2*Math.PI);
+                ctx.arc(this.x, this.y, this.radius,0,2*Math.PI);
+                ctx.stroke();
+            }
+
+        }
+        // Goi ham ve hinh tron:
+        function veHinhTron(radius, cricle) {
+
+            let canvas = document.getElementById("myCanvas");
+
+
+                cricle.draw(canvas);
+                cricle.clear(canvas);
+
+                cricle.changeCoordination(cricle.x + 5, cricle.y + 5);
+
+                setTimeout(function () {
+                    veHinhTron(canvas, cricle);
+                },100);
+            }
+            function runningCricle() {
+                let cricle = new Cricle(100, 100, 10, `red`);
+                let canvas = document.getElementById(`myCanvas`);
+
+                 while (1){
+                veHinhTron(canvas, cricle);
+            }
+
+        }
+    </script>
 </head>
 <body>
-$END$
+<canvas id="myCanvas" width="400" height="300" style="border: 1px black solid"></canvas>
+<button onclick="runningCricle()">Ve hinh tron</button>
+<script>
+
+</script>
 </body>
 </html>

@@ -2,9 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let Rectangle = function (width, height) {
+        this.width = width;
+        this.height = height;
+        this.getWidth = function () {
+            return width;
+        };
+        this.getHeight = function () {
+            return height;
+        };
+        this.getChuvi = function () {
+            return height + width;
+        };
+        this.getArea = function () {
+            return height * width;
+        };
+    };
+    let rectangle = new Rectangle(10, 20);
+    let height = rectangle.getHeight();
+    let width = rectangle.getWidth();
+    let chuvi = rectangle.getChuvi();
+    let area = rectangle.getArea();
+
+    document.write("width: " + width + "<br>height: " + height + "<br>chuvi: " + chuvi + "<br>area: " + area);
+    
+    // ve hinh chu nhat.
+    function veHinhChuNhat(x, y, height, width) {
+        this.x = x;
+        this.y = y;
+        this.height = height;
+        this.width = width;
+    }
+    function createRectangle() {
+        let ctx = document.getElementById(`myCanvas`).getContext("2d");
+        let rectangle = new veHinhChuNhat(500, 500, 100, 200 );
+        ctx.beginPath();
+        ctx.arc(rectangle.x, rectangle.y, rectangle.height, rectangle.width, 0, 2);
+        ctx.fill();
+    }
+    createRectangle();
+</script>
+<canvas id ="myCanvas" width="1368px" height="768px" style="border: 1px solid red;"></canvas>
 </body>
 </html>

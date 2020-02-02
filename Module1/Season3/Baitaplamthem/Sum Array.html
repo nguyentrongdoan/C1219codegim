@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>Cho day so [0, 1, 2, 3, 9, 10, 100]. Hay tinh SUM, AVRAGE, MIN, MAX.</div>
+
+<script>
+
+    let nowDay = [0, 1, 2, 3, 9, 10, 100];
+    let sum = 0;
+
+    function sumArray() {
+        for (i = 0; i < nowDay.length; i++){
+            sum += nowDay[i];
+        }
+        return sum;
+    }
+   document.write("tong la: " + sumArray(sum) + "<br>"); // tinh tong.
+
+    document.write("trung binh la:" +(sum) / (nowDay.length) + "<br>"); // tinh gia tri trung binh.
+
+
+    // tim MIN & MAX bang cach su dung ham apply.
+    let maxInNumber = Math.max.apply(Math, nowDay);
+    let minInNumber = Math.min.apply(Math, nowDay);
+
+    document.write("gia tri lon nhat la: " + maxInNumber + "<br>");
+    document.write("gia tri nho nhat la: " + minInNumber);
+</script>
+
+</body>
+</html>

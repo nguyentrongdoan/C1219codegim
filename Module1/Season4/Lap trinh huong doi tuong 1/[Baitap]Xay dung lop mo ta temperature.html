@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    let Temperature = function (celsius) {
+        this.celsius = celsius;
+        this.getCelsius = function () {
+            return celsius;
+        };
+        this.getFahrenheit = function () {
+            return celsius*1.8 + 32;
+        };
+        this.getKenvin = function () {
+            return celsius + 273.15;
+        };
+    };
+    let template = new Temperature(25);
+    let celsius = template.getCelsius();
+    let fahrenheit = template.getFahrenheit();
+    let kenvin = template.getKenvin();
+    document.write("celsius:" + celsius + "<br>F:" + fahrenheit + "<br>K:" + kenvin);
+</script>
+
 </body>
 </html>

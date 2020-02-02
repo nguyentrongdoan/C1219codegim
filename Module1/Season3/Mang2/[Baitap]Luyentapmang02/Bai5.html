@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai 5</title>
 </head>
 <body>
-$END$
+<script>
+    function soSanh() {
+       let array = ["2000", "10"];
+
+       let firstItem = array[0].toLowerCase();
+       let secondItem = array[1].toLowerCase();
+
+       for (let i = 0; i < secondItem.length; i++){
+           if (firstItem.indexOf(secondItem[i]) === -1)
+               return false;
+       }
+       return true;
+    }
+    soSanh();
+
+</script>
+
 </body>
 </html>

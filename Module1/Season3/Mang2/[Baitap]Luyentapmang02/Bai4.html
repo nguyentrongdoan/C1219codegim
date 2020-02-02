@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai 4: Dem so tu trong mot chuoi.</title>
 </head>
 <body>
-$END$
+<script>
+    function demSoTu() {
+        let str = new String(prompt("nhap ten chuoi:"));
+        let word = (str[0] != ` `);
+        for (let i = 0; i < str.length - 1; i++) {
+            if (str[i] == ` ` && str[i + 1] != ` `)
+            {
+                word++;
+            }
+        }
+        document.write(`str.length is:` + str.length + "<br>");
+        document.write("Số từ của chuỗi là:" + word);
+        return word;
+    }
+    demSoTu();
+
+</script>
 </body>
 </html>

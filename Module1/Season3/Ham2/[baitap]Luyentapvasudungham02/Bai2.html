@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai2</title>
 </head>
 <body>
-$END$
+<script>
+    function dienTich(radius) {
+        let x = Math.PI*radius*radius;
+        return x;
+    }
+    function chuVi(radius) {
+        let y = Math.PI*2*radius;
+        return y;
+    }
+    function tinhToan() {
+        let a = document.getElementById(`input1`).value;
+        let x = dienTich(a);
+        let y = chuVi(a);
+
+        document.getElementById(`result`).innerHTML = x;
+        document.getElementById(`result1`).innerHTML = y;
+    }
+
+</script>
+<input type="text" oninput="tinhToan()" placeholder="Enter radius" id="input1">
+Dien tich la:<span id="result"></span><br>
+Chu vi la: <span id="result1"></span>
+
 </body>
 </html>

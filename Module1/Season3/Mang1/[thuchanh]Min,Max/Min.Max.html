@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let x = [-3, 5, 1, 3, 2, 10];
+    // let max = x[0];
+    let index = 0;
+
+    // tim Max.
+
+    /*
+    for (let i = 1; i < x.length; i++){
+        if (x[i] > max){
+            max = x[i];
+            index = i;
+        }
+    }
+    alert("max: " + max + " at position " + index);
+    */
+
+    // tim Min.
+    /*
+    let min = x[0];
+
+    for (let i = 1; i < x.length; i++){
+        if (x[i] < min){
+            min = x[i];
+            index = i;
+        }
+    }
+    alert("min: " + min + "at position " + index);
+
+     */
+
+    // Cach khac su dung ham APPLY.
+
+    let maxInNumber = Math.max.apply(Math,x);
+    let minInNumber = Math.min.apply(Math,x);
+
+    document.write("MAX:" + maxInNumber+ "<br>");
+    document.write("MIN:" +minInNumber);
+
+</script>
+
+</body>
+</html>

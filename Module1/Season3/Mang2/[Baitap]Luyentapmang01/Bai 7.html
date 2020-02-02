@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai7</title>
 </head>
 <body>
-$END$
+<script>
+    function check(array, value) {
+        for ( let i = 0; i < array.length; i++){
+            if( value == array[i]){
+                array[i] = array[i + 1];
+                array[array.length - 1] = 0;
+                document.write(array);
+            }
+        }
+        return false;
+    }
+
+    
+
+</script>
+
 </body>
 </html>

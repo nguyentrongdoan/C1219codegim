@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 7: tinh tong 30 so dau tien chia het cho 7.</title>
+</head>
+<body>
+<script>
+    function toTal() {
+        let i = 0;
+        let count = 0;
+        let sum = 0;
+        while (count <= 29){
+            if (i % 7 == 0){
+                count += 1;
+                sum += i;
+                document.write(i + "<br>");
+            }
+            i += 1;
+        }
+
+        document.write("ToTal=" +sum);
+        return 0;
+    }
+    toTal();
+
+
+
+</script>
+</body>
+</html>

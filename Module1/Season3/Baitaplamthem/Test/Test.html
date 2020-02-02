@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/student.js"></script>
+</head>
+<body>
+<div id="dialog">
+    <h3>Thêm sinh viên</h3>
+<table>
+    <tr><td>Ma sinh vien</td><td><input type="text" id="id"></td></tr>
+    <tr><td>Họ và tên</td><td><input type="text" id="fullname"></td></tr>
+    <tr><td>Ngày sinh</td><td><input type="date" id="DOB"></td></tr>
+    <tr><td>Giới tính</td><td>
+        <input type="radio" value="Nam" name="sex">Nam
+        <input type="radio" value="Nữ" name="sex">Nữ
+    </td></tr>
+    <tr><td>Lớp</td><td>
+        <select name="" id="class">
+            <option value="C0919H">C0919H</option>
+            <option value="C1019H">C1019H</option>
+            <option value="C1119H">C1119H</option>
+            <option value="C1219H">C1219H</option>
+        </select>
+    </td></tr>
+    <td>
+        <td><button onclick="addStudent()" >Nhập</button></td>
+        <td><button onclick="closeDialog()">Đóng</button></td>
+    </tr>
+</table>
+</div>
+<div>
+    <h2>quản lí sinh viên</h2>
+    <a href="#" onclick="openDialog()">Thêm sinh viên</a>
+    <a href="#" onclick="refreshList()">Cap nhat danh sach</a>
+    <table id="content" border="1">
+        <thead>
+            <tr>
+                <th>Mã sinh viên</th>
+                <th><a title="Kich vao day de sap xep theo Ho va ten" onclick="orderByFullname()">Họ và tên</a></th>
+                <th><a title="Kich vao day de sap xep ngay sinh" onclick="orderByDob()">Ngày sinh</a></th>
+                <th>Giới tính</th>
+                <th>Lớp</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

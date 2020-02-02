@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai5: Tinh lai ngan hang ( lai me de lai con).</title>
+</head>
+<body>
+<script>
+    function vayLai() {
+        let x = parseInt(prompt("nhap so tien vay ngan hang:"));
+        let y = parseInt(prompt("nhap lai suat cho vay:"));
+        let z = parseInt(prompt("nhap thoi han cho vay la 6 thang hay 12 thang:"));
+        let n = x*(y/100);
+        if (z == 12)
+        {
+
+            for (let i = 1; i <= 5; i++) {
+                x += n;
+                document.write("so tien phai nam thu" + i + " la : " + x + "<br>");
+            }
+            return;
+        }
+        else if (z == 6)
+        {
+            for (let j = 1; j <= 5; j++)
+            {
+                x += (n/2);
+                document.write("so tien phai tra nam thu " + j + " la : " + x + "<br>");
+            }
+            return;
+        }
+        else (z < 12 && z > 12 && z < 6 && z > 6)
+        {
+            document.write("Kiem tra lai thoi han cho vay.");
+        }
+
+    }
+    vayLai();
+</script>
+
+</body>
+</html>

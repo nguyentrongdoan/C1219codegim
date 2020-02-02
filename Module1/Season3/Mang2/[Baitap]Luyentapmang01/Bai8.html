@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<script>
+    let array = [1, 2, 3, 4, 5];
+
+    function setUp(array) {
+
+        let first = 0;
+        let end = array.length - 1;
+
+        while (first <  end){
+            let b = array[first];
+            array[first] = array[end];
+            array[end] = b;
+            first++;
+            end--;
+        }
+    }
+    setUp(array);
+
+   for (let i in array){
+        document.write(array[i] + "<br>");
+    }
+</script>
+
+</body>
+</html>

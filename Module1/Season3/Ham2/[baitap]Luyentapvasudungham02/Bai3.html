@@ -2,9 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai3</title>
 </head>
 <body>
-$END$
+<script>
+    function giaiThua(number) {
+        let y = 1;
+
+       /* for (let i = 1; i <= number; i++){
+            y *= i;
+        }
+
+        */
+       // su dung vong lap while:
+        let i = 1;
+        while (i <= number){
+            y *= i;
+            i++;
+        }
+        document.getElementById(`result`).innerHTML = y;
+    }
+
+    function tinhToan() {
+        let number = document.getElementById(`input1`).value;
+        //let y = giaiThua(number);
+
+        giaiThua(number);
+    }
+</script>
+<input type="text" oninput="tinhToan()" placeholder="Enter a number" id="input1">
+Giai thua la:<span id="result"></span>
 </body>
 </html>

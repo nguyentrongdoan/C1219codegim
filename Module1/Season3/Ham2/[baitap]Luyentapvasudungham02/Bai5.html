@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai5: Nhap vao 3 so, hien thi so nho nhat.</title>
 </head>
 <body>
-$END$
+<script>
+
+    function searchMin() {
+        let x = Number.parseInt(prompt("nhap so thu nhat:"));
+        let y = Number.parseInt(prompt("nhap so thu hai:"));
+        let z = Number.parseInt(prompt("nhap so thu ba:"));
+        let minx;
+        if (x !== y && x !== z && y !== z){
+            if (x < y && x < z){
+                alert("min: " + x);
+            }
+            else if (y < x && y < z){
+                alert("min: " + y);
+            }else {
+                alert("min:" + z);
+            }
+        }
+        else {
+            alert("Vui long nhap lai.");
+        }
+    }
+    searchMin();
+
+</script>
+
 </body>
 </html>

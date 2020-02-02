@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Bai2</title>
 </head>
 <body>
-$END$
+<script>
+    function nowDay(a) {
+        let x =  ++a;
+        return x;
+    }
+
+    function next() {
+        let input = document.getElementById(`input1`).value;
+        let x = nowDay(input);
+
+        document.getElementById(`x`).innerHTML = x;
+    }
+
+</script>
+<input type="text" id="input1" placeholder="Enter number" oninput="next()">Gia tri tra lai la: <span id="x"></span>
+
 </body>
 </html>

@@ -14,7 +14,7 @@
     z = Number.parseInt(z);
     let maxx;
 
-    if ( x !== y && x !== z ) {
+    if ( x !== y && x !== z && y !== z) {
         if (x > y && x > z) {
             alert(" So lon nhat la: " + x);
         } else if (y > z && y > x) {
@@ -22,7 +22,8 @@
         } else {
             alert(" So lon nhat la: " + z);
         }
-    } else {
+    }
+    else {
         alert("Ban da nhap cac so co gia tri bang nhau, vui long nhap lai gia tri khac!");
     }
 </script>

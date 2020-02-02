@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6 in hinh trai tim cach khac</title>
+</head>
+<body>
+<script>
+   function breakHeart() {
+       let i;
+       let j;
+       for (i = 0; i < 6; i++){
+           for (j = 0; j < 7; j++){
+               if (i == 0 && j % 3 != 0 ||  i == 1 && j %3 == 0 || i - j == 2 || i + j == 8)
+               {
+                   document.writeln("*");
+               }else {
+                   document.writeln("&nbsp;&nbsp;");
+               }
+           }
+           document.writeln("<br>");
+       }
+
+   }
+   breakHeart();
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 6: Đổi kí tự</title>
+</head>
+<body>
+<script>
+    function sapXep() {
+        let array = ["a", "-", 9, "c", 6, "-", "e", "-", "f", "-", "-"];
+        for (let i = 0; i <= array.length - 1; i++)
+        {
+            if (array[i] === "-"){
+                array[i] = "_";
+            }
+        }
+        document.write(array);
+    }
+    sapXep();
+
+</script>
+</body>
+</html>

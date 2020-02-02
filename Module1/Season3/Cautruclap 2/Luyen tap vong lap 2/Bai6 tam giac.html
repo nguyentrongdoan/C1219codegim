@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai6 Ve tam giac can</title>
+</head>
+<body>
+<script>
+    let h = parseInt(prompt("nhap chieu cao cua tam giac can can ve:"));
+    for (let i = 1; i <= h; i++){
+        for (let j = 1; j <= (2*h) - 1; j++){
+            if (j >= h - ( i - 1) && j <= h + (i - 1)){
+                document.writeln("*");
+            }else {
+                document.writeln("&nbsp;&nbsp;")
+            }
+        }
+        document.writeln("<br>");
+    }
+
+</script>
+
+</body>
+</html>
